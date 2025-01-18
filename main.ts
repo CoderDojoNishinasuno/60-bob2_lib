@@ -50,7 +50,9 @@ function みぎにまわる (じかん: number) {
 function ひだりてをふる (かいすう: number) {
     for (let index = 0; index < かいすう; index++) {
         ひだりて(30)
+        basic.pause(200)
         ひだりて(330)
+        basic.pause(200)
     }
 }
 function ひだりにまわる (じかん: number) {
@@ -64,7 +66,9 @@ function ひだりにまわる (じかん: number) {
 function みぎてをふる (かいすう: number) {
     for (let index = 0; index < かいすう; index++) {
         みぎて(330)
+        basic.pause(200)
         みぎて(30)
+        basic.pause(200)
     }
 }
 basic.forever(function () {
