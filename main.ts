@@ -1,3 +1,6 @@
+
+//% color=#4060c0 icon="¥uf544"
+
 namespace BOB2 {
 
     //% block="見せる|number $v"
@@ -5,7 +8,8 @@ namespace BOB2 {
     {return(v)}
 
     //% block="とめる"
-    export function stop() {
+    export function stop() 
+    {
         pins.digitalWritePin(DigitalPin.P13, 0)
         pins.digitalWritePin(DigitalPin.P14, 0)
         pins.digitalWritePin(DigitalPin.P15, 0)
