@@ -1,10 +1,13 @@
-//% color=190 icon="\f544" block="BOB2" weight=100
+//% color=130 icon="\f544" block="BOB2" weight=100
 
 namespace BOB2 
 {
-    //% block="見せる|number $v"
+    //% block="見せる|戻り値 $v"
     export function showNumber(v: number, interval: number = 150)
-    {return(v)}
+    {
+        basic:showNumber(v)
+        return(v)
+    }
 
     //% block="とめる"
     export function stop() 
