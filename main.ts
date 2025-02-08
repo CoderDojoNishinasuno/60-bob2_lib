@@ -2,8 +2,8 @@
 
 namespace BOB2 
 {
-    //% block="見せる|戻り値 $v"
-    export function showNumber(v: number, interval: number = 150)
+    //% blockId="BOB2" block="見せる %v"
+    export function showNumber(v: number)
     {
         basic:showNumber(v)
         return(v)
