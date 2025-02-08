@@ -1,4 +1,4 @@
-//% color=190 icon="¥f544" block="BOB2" weight=100
+//% color=190 icon="\f544" block="BOB2" weight=100
 
 namespace BOB2 
 {
