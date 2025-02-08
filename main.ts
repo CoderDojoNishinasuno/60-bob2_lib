@@ -1,8 +1,7 @@
+//% color=#4060c0 icon="¥f544"
 
-//% color=#4060c0 icon="¥uf544"
-
-namespace BOB2 {
-
+namespace BOB2 
+{
     //% block="見せる|number $v"
     export function showNumber(v: number, interval: number = 150)
     {return(v)}
