@@ -1,15 +1,10 @@
-//% color=130 icon="\f544" block="BOB2" weight=100
+//% color=#F0a020 icon="\uf001" block="BOB V2" weight=100
+//% groups="['動き','うで']"
 
 namespace BOB2 
 {
-    //% blockId="BOB2" block="見せる %v"
-    export function showNumber(v: number)
-    {
-        basic:showNumber(v)
-        return(v)
-    }
-
-    //% block="とめる"
+    //% block="止める"
+    //% group="動き"
     export function stop() 
     {
         pins.digitalWritePin(DigitalPin.P13, 0)
@@ -18,17 +13,20 @@ namespace BOB2
         pins.digitalWritePin(DigitalPin.P16, 0)
     }
 
-    //% block="みぎて|number $angle"
+    //% block="右手うごかす %angle 度"
+    //% group="うで"
     export function rightHand(angle: number) {
         servos.P1.setAngle(60 - angle)
     }
 
-    //% block="ひだりて|number $angle"
+    //% block="左手うごかす %angle 度"
+    //% group="うで"
     export function leftHand(angle: number) {
         servos.P2.setAngle(120 - angle)
     }
 
-    //% block="うしろにすすむ"
+    //% block="うしろに進む"
+    //% group="動き"
     export function backword() {
         pins.digitalWritePin(DigitalPin.P13, 0)
         pins.digitalWritePin(DigitalPin.P14, 1)
@@ -36,7 +34,8 @@ namespace BOB2
         pins.digitalWritePin(DigitalPin.P16, 0)
     }
 
-    //% block="まえにすすむ"
+    //% block="まえに進む"
+    //% group="動き"
     export function forward() {
         pins.digitalWritePin(DigitalPin.P13, 1)
         pins.digitalWritePin(DigitalPin.P14, 0)
@@ -44,42 +43,46 @@ namespace BOB2
         pins.digitalWritePin(DigitalPin.P16, 1)
     }
 
-    //% block="みぎまわる|number $angle"
+    //% block="右に回る %t 秒"
+    //% group="動き"
     export function turnRight(t: number) {
         pins.digitalWritePin(DigitalPin.P13, 1)
         pins.digitalWritePin(DigitalPin.P14, 0)
         pins.digitalWritePin(DigitalPin.P15, 1)
         pins.digitalWritePin(DigitalPin.P16, 0)
-        basic.pause(t)
+        basic.pause(t*1000)
         stop()
     }
 
-    //% block="ひだりてふる|number $num"
-    export function waveLeftHand(num: number) {
-        for (let index = 0; index < num; index++) {
-            leftHand(-30)
-            basic.pause(200)
-            leftHand(30)
-            basic.pause(200)
-        }
-    }
-
-    //% block="ひだりまわる| number $t"
+    //% block="左に回る %t 秒"
+    //% group="動き"
     export function turnLeft(t: number) {
         pins.digitalWritePin(DigitalPin.P13, 0)
         pins.digitalWritePin(DigitalPin.P14, 1)
         pins.digitalWritePin(DigitalPin.P15, 0)
         pins.digitalWritePin(DigitalPin.P16, 1)
-        basic.pause(t)
+        basic.pause(t*1000)
         stop()
     }
 
-    //% block="みぎてふる|number $num"
+    //% block="右手をふる %num 回"
+    //% group="うで"
     export function waveRightHand(num: number) {
-        for (let index2 = 0; index2 < num; index2++) {
+        for (let index = 0; index < num; index++) {
             rightHand(-30)
             basic.pause(200)
             rightHand(30)
+            basic.pause(200)
+        }
+    }
+
+    //% block="左手をふる %num 回"
+    //% group="うで"
+    export function waveLeftHand(num: number) {
+        for (let index = 0; index < num; index++) {
+            leftHand(-30)
+            basic.pause(200)
+            leftHand(30)
             basic.pause(200)
         }
     }
