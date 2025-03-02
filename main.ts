@@ -75,6 +75,7 @@ namespace BOB2 {
             pins.digitalWritePin(DigitalPin.P16, 0)
             basic.pause(t * 1000)
             privilage = false
+            stop()
         }
     }
 
@@ -88,8 +89,8 @@ namespace BOB2 {
             pins.digitalWritePin(DigitalPin.P15, 0)
             pins.digitalWritePin(DigitalPin.P16, 1)
             basic.pause(t * 1000)
-            stop()
             privilage = false
+            stop()
         }
     }
 
