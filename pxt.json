@@ -1,5 +1,5 @@
 {
-    "name": "60-BOB2_lib_original",
+    "name": "60-BOB2_lib",
     "description": "",
     "dependencies": {
         "core": "*",
