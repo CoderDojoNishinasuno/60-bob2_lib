@@ -1,6 +1,3 @@
-//% color=#F0a020 icon="\uf001" block="BOB V2" weight=100
-//% groups="['動き','うで']"
-
 namespace BOB2 {
     // falseは、関数実行許可
     let privilage = false
