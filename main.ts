@@ -33,7 +33,7 @@ namespace BOB2 {
     export function leftHand(angle: number) {
         if (!privilage) {
             privilage = true
-            servos.P2.setAngle(120 - angle)
+            servos.P2.setAngle(30 + angle)
             privilage = false
         }
     }
@@ -100,10 +100,10 @@ namespace BOB2 {
         if (!privilage) {
             privilage = true
             for (let index = 0; index < num; index++) {
-                rightHand(-30)
-                basic.pause(200)
-                rightHand(30)
-                basic.pause(200)
+                rightHand(80)
+                basic.pause(100)
+                rightHand(40)
+                basic.pause(100)
             }
             privilage = false
         }
@@ -115,10 +115,10 @@ namespace BOB2 {
         if (!privilage) {
             privilage = true
             for (let index = 0; index < num; index++) {
-                leftHand(-30)
-                basic.pause(200)
-                leftHand(30)
-                basic.pause(200)
+                leftHand(80)
+                basic.pause(100)
+                leftHand(40)
+                basic.pause(100)
             }
             privilage = false
         }
