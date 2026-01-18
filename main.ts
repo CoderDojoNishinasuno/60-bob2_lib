@@ -97,30 +97,22 @@ namespace BOB2 {
     //% block="右手をふる %num 回"
     //% group="うで"
     export function waveRightHand(num: number) {
-        if (!privilage) {
-            privilage = true
-            for (let index = 0; index < num; index++) {
-                rightHand(80)
-                basic.pause(1000)
-                rightHand(40)
-                basic.pause(1000)
-            }
-            privilage = false
+        for (let index = 0; index < num; index++) {
+            rightHand(80)
+            basic.pause(1000)
+            rightHand(40)
+            basic.pause(1000)
         }
     }
 
     //% block="左手をふる %num 回"
     //% group="うで"
     export function waveLeftHand(num: number) {
-        if (!privilage) {
-            privilage = true
-            for (let index = 0; index < num; index++) {
-                leftHand(80)
-                basic.pause(1000)
-                leftHand(40)
-                basic.pause(1000)
-            }
-            privilage = false
+        for (let index = 0; index < num; index++) {
+            leftHand(80)
+            basic.pause(1000)
+            leftHand(40)
+            basic.pause(1000)
         }
     }
 }
